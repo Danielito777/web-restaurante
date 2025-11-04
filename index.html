@@ -116,6 +116,24 @@
                 <dd>Se aconseja reservar mesa los fines de semana.</dd>
             </dl>
         </aside>
+        <button id="abrirDialogo">Reservar mesa</button>
+        <dialog id="reservaDialogo">
+            <h3>Solicitud de reserva</h3>
+            <ul>
+                <li>Máximo 10 personas por mesa.</li>
+                <li>30 minutos de cortesía para mantener la reserva.</li>
+                <li>Por favor, avise con antelación si llega tarde.</li>
+                <li>No se permiten mascotas en el área interior.</li>
+            </ul>
+        <button id="cerrarDialogo">Cerrar</button>
+        </dialog>
+        <script>
+            const botonAbrir = document.getElementById('abrirDialogo');
+            const dialogo = document.getElementById('reservaDialogo');
+            const botonCerrar = document.getElementById('cerrarDialogo');
+            botonAbrir.addEventListener('click', () => dialogo.showModal());
+            botonCerrar.addEventListener('click', () => dialogo.close());
+        </script>
     </main>
     <footer>
     </footer>
